@@ -1,0 +1,257 @@
+nohup: ignoring input
+[20:38:37.878] [32mINFO[39m (151651): [36mStopped orphaned containers[39m
+    [35mcount[39m: 1
+    [35mnames[39m: [
+      "nanoclaw-whatsapp-main-1775522047280"
+    ]
+[20:38:37.888] [32mINFO[39m (151651): [36mDatabase initialized[39m
+[20:38:37.889] [32mINFO[39m (151651): [36mState loaded[39m
+    [35mgroupCount[39m: 1
+[20:38:37.910] [32mINFO[39m (151651): [36mCredential proxy started[39m
+    [35mport[39m: 3001
+    [35mhost[39m: "172.17.0.1"
+    [35mauthMode[39m: "oauth"
+[20:38:38.213] [32mINFO[39m (151651): [36mconnected to WA[39m
+    [35mbrowser[39m: [
+      "Mac OS",
+      "Chrome",
+      "14.4.1"
+    ]
+    [35mhelloMsg[39m: {
+      "clientHello": {
+        "ephemeral": "XhBauEOwy9NxpHFbvpClhx4fHZn3DUPfVwn4iYmWpB8="
+      }
+    }
+[20:38:38.346] [32mINFO[39m (151651): [36mlogging in...[39m
+    [35mnode[39m: {
+      "username": "13012211308",
+      "passive": true,
+      "userAgent": {
+        "platform": "WEB",
+        "appVersion": {
+          "primary": 2,
+          "secondary": 3000,
+          "tertiary": 1036755913
+        },
+        "mcc": "000",
+        "mnc": "000",
+        "osVersion": "0.1",
+        "device": "Desktop",
+        "osBuildNumber": "0.1",
+        "releaseChannel": "RELEASE",
+        "localeLanguageIso6391": "en",
+        "localeCountryIso31661Alpha2": "US"
+      },
+      "webInfo": {
+        "webSubPlatform": "WEB_BROWSER"
+      },
+      "connectType": "WIFI_UNKNOWN",
+      "connectReason": "USER_ACTIVATED",
+      "device": 1,
+      "pull": true,
+      "lidDbMigrated": false
+    }
+[20:38:38.956] [32mINFO[39m (151651): [36m804 pre-keys found on server[39m
+[20:38:38.956] [32mINFO[39m (151651): [36mCurrent prekey ID: 812, exists in storage: true[39m
+[20:38:38.956] [32mINFO[39m (151651): [36mPreKey validation passed - Server: 804, Current prekey 812 exists[39m
+[20:38:39.234] [32mINFO[39m (151651): [36mhandled 0 offline messages/notifications[39m
+[20:38:39.236] [32mINFO[39m (151651): [36mConnection is now AwaitingInitialSync, buffering events[39m
+[20:38:39.236] [32mINFO[39m (151651): [36mHistory sync is enabled, awaiting notification with a 20s timeout.[39m
+[20:38:39.275] [32mINFO[39m (151651): [36mopened connection to WA[39m
+[20:38:39.287] [32mINFO[39m (151651): [36mConnected to WhatsApp[39m
+[20:38:39.291] [32mINFO[39m (151651): [36mScheduler loop started[39m
+[20:38:39.295] [32mINFO[39m (151651): [36mIPC watcher started (per-group namespaces)[39m
+[20:38:39.297] [32mINFO[39m (151651): [36mNanoClaw running (trigger: @Claw)[39m
+[20:38:39.314] [32mINFO[39m (151651): [36mOwn LID session created successfully[39m
+    [35mmyPN[39m: "13012211308:1@s.whatsapp.net"
+    [35mmyLID[39m: "128476078170184:1@lid"
+[20:38:55.314] [32mINFO[39m (151651): [36mNew messages[39m
+    [35mcount[39m: 1
+[20:38:56.018] [32mINFO[39m (151651): [36mProcessing messages[39m
+    [35mgroup[39m: "Self-chat"
+    [35mmessageCount[39m: 1
+[20:38:56.043] [32mINFO[39m (151651): [36mSpawning container agent[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1775522336042"
+    [35mmountCount[39m: 8
+    [35misMain[39m: true
+[20:38:56.039] [32mINFO[39m (151651): [36mMount allowlist loaded successfully[39m
+    [35mpath[39m: "/home/javastarchild/.config/nanoclaw/mount-allowlist.json"
+    [35mallowedRoots[39m: 3
+    [35mblockedPatterns[39m: 17
+[20:38:56.041] [33mWARN[39m (151651): [36mAdditional mount REJECTED[39m
+    [35mgroup[39m: "Self-chat"
+    [35mrequestedPath[39m: "/var/run/docker.sock"
+    [35mcontainerPath[39m: "/var/run/docker.sock"
+    [35mreason[39m: "Invalid container path: \"/var/run/docker.sock\" - must be relative, non-empty, and not contain \"..\""
+[20:38:59.236] [33mWARN[39m (151651): [36mTimeout in AwaitingInitialSync, forcing state to Online and flushing buffer[39m
+[20:39:06.861] [31mERROR[39m (151651): [36mContainer exited with error[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcode[39m: 137
+    [35mduration[39m: 10830
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: b60b1818-ad73-4361-9bc6-7e387c0b0765, resumeAt: latest)...\n[agent-runner] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: b60b1818-ad73-4361-9bc6-7e387c0b0765\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.12.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1\nnpm notice To update run: npm install -g npm@11.12.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/javastarchild/nanoclaw/groups/whatsapp_main/logs/container-2026-04-07T00-39-06-859Z.log"
+[20:39:06.861] [31mERROR[39m (151651): [36mContainer agent error[39m
+    [35mgroup[39m: "Self-chat"
+    error: "Container exited with code 137: ] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: b60b1818-ad73-4361-9bc6-7e387c0b0765\n"
+[20:39:07.102] [33mWARN[39m (151651): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Self-chat"
+[20:39:07.103] [32mINFO[39m (151651): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "13012211308@s.whatsapp.net"
+    [35mretryCount[39m: 1
+    [35mdelayMs[39m: 5000
+[20:39:12.396] [32mINFO[39m (151651): [36mProcessing messages[39m
+    [35mgroup[39m: "Self-chat"
+    [35mmessageCount[39m: 1
+[20:39:12.407] [32mINFO[39m (151651): [36mSpawning container agent[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1775522352407"
+    [35mmountCount[39m: 8
+    [35misMain[39m: true
+[20:39:12.406] [33mWARN[39m (151651): [36mAdditional mount REJECTED[39m
+    [35mgroup[39m: "Self-chat"
+    [35mrequestedPath[39m: "/var/run/docker.sock"
+    [35mcontainerPath[39m: "/var/run/docker.sock"
+    [35mreason[39m: "Invalid container path: \"/var/run/docker.sock\" - must be relative, non-empty, and not contain \"..\""
+[20:39:22.852] [31mERROR[39m (151651): [36mContainer exited with error[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcode[39m: 137
+    [35mduration[39m: 10451
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: b60b1818-ad73-4361-9bc6-7e387c0b0765, resumeAt: latest)...\n[agent-runner] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: b60b1818-ad73-4361-9bc6-7e387c0b0765\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.12.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1\nnpm notice To update run: npm install -g npm@11.12.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/javastarchild/nanoclaw/groups/whatsapp_main/logs/container-2026-04-07T00-39-22-852Z.log"
+[20:39:22.853] [31mERROR[39m (151651): [36mContainer agent error[39m
+    [35mgroup[39m: "Self-chat"
+    error: "Container exited with code 137: ] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: b60b1818-ad73-4361-9bc6-7e387c0b0765\n"
+[20:39:23.094] [33mWARN[39m (151651): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Self-chat"
+[20:39:23.094] [32mINFO[39m (151651): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "13012211308@s.whatsapp.net"
+    [35mretryCount[39m: 2
+    [35mdelayMs[39m: 10000
+[20:39:33.334] [32mINFO[39m (151651): [36mProcessing messages[39m
+    [35mgroup[39m: "Self-chat"
+    [35mmessageCount[39m: 1
+[20:39:33.346] [32mINFO[39m (151651): [36mSpawning container agent[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1775522373345"
+    [35mmountCount[39m: 8
+    [35misMain[39m: true
+[20:39:33.345] [33mWARN[39m (151651): [36mAdditional mount REJECTED[39m
+    [35mgroup[39m: "Self-chat"
+    [35mrequestedPath[39m: "/var/run/docker.sock"
+    [35mcontainerPath[39m: "/var/run/docker.sock"
+    [35mreason[39m: "Invalid container path: \"/var/run/docker.sock\" - must be relative, non-empty, and not contain \"..\""
+[20:39:39.428] [31mERROR[39m (151651): [36mContainer exited with error[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcode[39m: 137
+    [35mduration[39m: 6088
+    [35mstderr[39m: ""
+    [35mstdout[39m: ""
+    [35mlogFile[39m: "/home/javastarchild/nanoclaw/groups/whatsapp_main/logs/container-2026-04-07T00-39-39-427Z.log"
+[20:39:39.428] [31mERROR[39m (151651): [36mContainer agent error[39m
+    [35mgroup[39m: "Self-chat"
+    error: "Container exited with code 137: "
+[20:39:39.664] [33mWARN[39m (151651): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Self-chat"
+[20:39:39.665] [32mINFO[39m (151651): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "13012211308@s.whatsapp.net"
+    [35mretryCount[39m: 3
+    [35mdelayMs[39m: 20000
+[20:39:59.966] [33mWARN[39m (151651): [36mAdditional mount REJECTED[39m
+    [35mgroup[39m: "Self-chat"
+    [35mrequestedPath[39m: "/var/run/docker.sock"
+    [35mcontainerPath[39m: "/var/run/docker.sock"
+    [35mreason[39m: "Invalid container path: \"/var/run/docker.sock\" - must be relative, non-empty, and not contain \"..\""
+[20:39:59.954] [32mINFO[39m (151651): [36mProcessing messages[39m
+    [35mgroup[39m: "Self-chat"
+    [35mmessageCount[39m: 1
+[20:39:59.966] [32mINFO[39m (151651): [36mSpawning container agent[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1775522399966"
+    [35mmountCount[39m: 8
+    [35misMain[39m: true
+[20:40:08.388] [31mERROR[39m (151651): [36mContainer exited with error[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcode[39m: 137
+    [35mduration[39m: 8428
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: b60b1818-ad73-4361-9bc6-7e387c0b0765, resumeAt: latest)...\n[agent-runner] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.12.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1\nnpm notice To update run: npm install -g npm@11.12.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/javastarchild/nanoclaw/groups/whatsapp_main/logs/container-2026-04-07T00-40-08-388Z.log"
+[20:40:08.389] [31mERROR[39m (151651): [36mContainer agent error[39m
+    [35mgroup[39m: "Self-chat"
+    error: "Container exited with code 137: n\n[agent-runner] Starting query (session: b60b1818-ad73-4361-9bc6-7e387c0b0765, resumeAt: latest)...\n[agent-runner] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n"
+[20:40:08.663] [33mWARN[39m (151651): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Self-chat"
+[20:40:08.663] [32mINFO[39m (151651): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "13012211308@s.whatsapp.net"
+    [35mretryCount[39m: 4
+    [35mdelayMs[39m: 40000
+[20:40:48.897] [32mINFO[39m (151651): [36mProcessing messages[39m
+    [35mgroup[39m: "Self-chat"
+    [35mmessageCount[39m: 1
+[20:40:48.908] [32mINFO[39m (151651): [36mSpawning container agent[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1775522448908"
+    [35mmountCount[39m: 8
+    [35misMain[39m: true
+[20:40:48.908] [33mWARN[39m (151651): [36mAdditional mount REJECTED[39m
+    [35mgroup[39m: "Self-chat"
+    [35mrequestedPath[39m: "/var/run/docker.sock"
+    [35mcontainerPath[39m: "/var/run/docker.sock"
+    [35mreason[39m: "Invalid container path: \"/var/run/docker.sock\" - must be relative, non-empty, and not contain \"..\""
+[20:40:56.707] [31mERROR[39m (151651): [36mContainer exited with error[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcode[39m: 137
+    [35mduration[39m: 7804
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: b60b1818-ad73-4361-9bc6-7e387c0b0765, resumeAt: latest)...\n[agent-runner] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.12.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1\nnpm notice To update run: npm install -g npm@11.12.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/javastarchild/nanoclaw/groups/whatsapp_main/logs/container-2026-04-07T00-40-56-706Z.log"
+[20:40:56.707] [31mERROR[39m (151651): [36mContainer agent error[39m
+    [35mgroup[39m: "Self-chat"
+    error: "Container exited with code 137: n\n[agent-runner] Starting query (session: b60b1818-ad73-4361-9bc6-7e387c0b0765, resumeAt: latest)...\n[agent-runner] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n"
+[20:40:56.945] [33mWARN[39m (151651): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Self-chat"
+[20:40:56.945] [32mINFO[39m (151651): [36mScheduling retry with backoff[39m
+    [35mgroupJid[39m: "13012211308@s.whatsapp.net"
+    [35mretryCount[39m: 5
+    [35mdelayMs[39m: 80000
+[20:42:17.184] [32mINFO[39m (151651): [36mProcessing messages[39m
+    [35mgroup[39m: "Self-chat"
+    [35mmessageCount[39m: 1
+[20:42:17.194] [32mINFO[39m (151651): [36mSpawning container agent[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcontainerName[39m: "nanoclaw-whatsapp-main-1775522537194"
+    [35mmountCount[39m: 8
+    [35misMain[39m: true
+[20:42:17.193] [33mWARN[39m (151651): [36mAdditional mount REJECTED[39m
+    [35mgroup[39m: "Self-chat"
+    [35mrequestedPath[39m: "/var/run/docker.sock"
+    [35mcontainerPath[39m: "/var/run/docker.sock"
+    [35mreason[39m: "Invalid container path: \"/var/run/docker.sock\" - must be relative, non-empty, and not contain \"..\""
+[20:42:28.427] [31mERROR[39m (151651): [36mContainer exited with error[39m
+    [35mgroup[39m: "Self-chat"
+    [35mcode[39m: 137
+    [35mduration[39m: 11238
+    [35mstderr[39m: "[agent-runner] Received input for group: whatsapp_main\n[agent-runner] Starting query (session: b60b1818-ad73-4361-9bc6-7e387c0b0765, resumeAt: latest)...\n[agent-runner] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: b60b1818-ad73-4361-9bc6-7e387c0b0765\n"
+    [35mstdout[39m: "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.12.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1\nnpm notice To update run: npm install -g npm@11.12.1\nnpm notice\n"
+    [35mlogFile[39m: "/home/javastarchild/nanoclaw/groups/whatsapp_main/logs/container-2026-04-07T00-42-28-427Z.log"
+[20:42:28.428] [31mERROR[39m (151651): [36mContainer agent error[39m
+    [35mgroup[39m: "Self-chat"
+    error: "Container exited with code 137: ] Additional directories: /workspace/extra/logic_tools, /workspace/extra/stock_picker\n[agent-runner] [msg #1] type=system/init\n[agent-runner] Session initialized: b60b1818-ad73-4361-9bc6-7e387c0b0765\n"
+[20:42:28.664] [33mWARN[39m (151651): [36mAgent error, rolled back message cursor for retry[39m
+    [35mgroup[39m: "Self-chat"
+[20:42:28.665] [31mERROR[39m (151651): [36mMax retries exceeded, dropping messages (will retry on next incoming message)[39m
+    [35mgroupJid[39m: "13012211308@s.whatsapp.net"
+    [35mretryCount[39m: 6
+[20:47:33.215] [32mINFO[39m (151651): [36mShutdown signal received[39m
+    [35msignal[39m: "SIGTERM"
+[20:47:33.217] [32mINFO[39m (151651): [36mGroupQueue shutting down (containers detached, not killed)[39m
+    [35mactiveCount[39m: 0
+    [35mdetachedContainers[39m: []
+[20:47:33.218] [32mINFO[39m (151651): [36mconnection closed[39m
+[20:47:33.220] [32mINFO[39m (151651): [36mConnection closed[39m
+    [35mshouldReconnect[39m: true
+    [35mqueuedMessages[39m: 0
+[20:47:33.221] [32mINFO[39m (151651): [36mReconnecting...[39m
