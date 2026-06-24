@@ -51,6 +51,15 @@ export const CREDENTIAL_PROXY_PORT = parseInt(
   process.env.CREDENTIAL_PROXY_PORT || '3001',
   10,
 );
+// Max on-disk size of a Claude session transcript before NanoClaw rotates to a
+// fresh session. The Agent SDK replays the entire transcript into memory on
+// resume, so an unbounded transcript eventually OOMs the container (exit 137).
+// Rotating drops raw scrollback but per-group CLAUDE.md / auto-memory persists.
+export const SESSION_MAX_TRANSCRIPT_BYTES = parseInt(
+  process.env.SESSION_MAX_TRANSCRIPT_BYTES || '8388608',
+  10,
+); // 8MB default
+
 export const IPC_POLL_INTERVAL = 1000;
 export const IDLE_TIMEOUT = parseInt(process.env.IDLE_TIMEOUT || '1800000', 10); // 30min default — how long to keep container alive after last result
 export const MAX_CONCURRENT_CONTAINERS = Math.max(

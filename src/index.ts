@@ -4,8 +4,10 @@ import path from 'path';
 import {
   ASSISTANT_NAME,
   CREDENTIAL_PROXY_PORT,
+  DATA_DIR,
   IDLE_TIMEOUT,
   POLL_INTERVAL,
+  SESSION_MAX_TRANSCRIPT_BYTES,
   TIMEZONE,
   TRIGGER_PATTERN,
 } from './config.js';
@@ -27,6 +29,7 @@ import {
   PROXY_BIND_HOST,
 } from './container-runtime.js';
 import {
+  clearSession,
   getAllChats,
   getAllRegisteredGroups,
   getAllSessions,
@@ -264,6 +267,36 @@ async function processGroupMessages(chatJid: string): Promise<boolean> {
   return true;
 }
 
+/**
+ * Size (in bytes) of a group's on-disk Claude session transcript, or 0 if it
+ * can't be found. The transcript lives under the per-group .claude sessions
+ * mount; the SDK names the project dir after the container cwd (/workspace/group
+ * -> "-workspace-group"), but we glob to stay robust if that ever changes.
+ */
+function getSessionTranscriptBytes(
+  groupFolder: string,
+  sessionId: string,
+): number {
+  const projectsDir = path.join(
+    DATA_DIR,
+    'sessions',
+    groupFolder,
+    '.claude',
+    'projects',
+  );
+  if (!fs.existsSync(projectsDir)) return 0;
+  let total = 0;
+  for (const project of fs.readdirSync(projectsDir)) {
+    const transcript = path.join(projectsDir, project, `${sessionId}.jsonl`);
+    try {
+      total += fs.statSync(transcript).size;
+    } catch {
+      /* not in this project dir */
+    }
+  }
+  return total;
+}
+
 async function runAgent(
   group: RegisteredGroup,
   prompt: string,
@@ -271,7 +304,29 @@ async function runAgent(
   onOutput?: (output: ContainerOutput) => Promise<void>,
 ): Promise<'success' | 'error'> {
   const isMain = group.isMain === true;
-  const sessionId = sessions[group.folder];
+  let sessionId: string | undefined = sessions[group.folder];
+
+  // Guard against unbounded transcript growth. The Agent SDK replays the whole
+  // session transcript into memory on resume; once it's large enough the
+  // container OOMs (exit 137). If the transcript has grown past the threshold,
+  // drop the session so the next run starts fresh with a small transcript.
+  if (sessionId) {
+    const transcriptBytes = getSessionTranscriptBytes(group.folder, sessionId);
+    if (transcriptBytes > SESSION_MAX_TRANSCRIPT_BYTES) {
+      logger.warn(
+        {
+          group: group.name,
+          sessionId,
+          transcriptBytes,
+          limit: SESSION_MAX_TRANSCRIPT_BYTES,
+        },
+        'Session transcript exceeded size limit, rotating to a fresh session',
+      );
+      clearSession(group.folder);
+      delete sessions[group.folder];
+      sessionId = undefined;
+    }
+  }
 
   // Update tasks snapshot for container to read (filtered by group)
   const tasks = getAllTasks();
